@@ -76,7 +76,7 @@
         <form action="https://localhost:4000/api/cdn/{endpoint}" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" id="submit"/>
         </form>
       </div>
     </div>
@@ -85,6 +85,7 @@
         // Code to create events goes here
         console.log("Event created for " + buttonName);
       }
+      bpClick("#submit", "forn submitted")
     </script>
   </body>
 </html>
