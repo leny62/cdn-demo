@@ -48,13 +48,13 @@
       }
     </style>
 
-    
-    <script src="https://pub-b926a0b6e5114d91b581ff076278508f.r2.dev/script.js"></script>
+    <script src="https://static.staticsave.com/cdnfolder/hikr-cdn.js"></script>
+
     <script>
-        bpConfig('4996094772');
+      hikr.config({
+        websiteId: "4996094772",
+      });
     </script>
-
-
   </head>
 
   <body>
@@ -76,7 +76,7 @@
         <form action="https://localhost:4000/api/cdn/{endpoint}" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
-        <button value="Submit" id="formSubmit">FormSubmit</button>
+          <button value="Submit" id="formSubmit">FormSubmit</button>
         </form>
         <button value="Submit" id="submit">Submit</button>
       </div>
@@ -85,9 +85,13 @@
       function createEvent(buttonName) {
         // Code to create events goes here
         console.log("Event created for " + buttonName);
+        // Push data when a button is clicked
+        hikr.pushData({
+          eventType: "button_click",
+          collectionName: "ButtonEvents",
+          data: buttonName,
+        });
       }
-      bpClick("#submit", "Submit Button Clicked")
-      bpClick("#formSubmit", "form submitted")
     </script>
   </body>
 </html>
