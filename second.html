@@ -95,11 +95,13 @@
         const type = button.getAttribute("type");
         console.log(`Button ${i + 1} type: ${type}`);
         if (type === "button") {
-          hikr.pushData({
-            eventType: "click",
-            collectionName: "",
-            data: "Submit Button Clicked",
-          });
+          button.addEventListener("click",()=>{
+            hikr.pushData({
+              eventType: "click",
+              collectionName: "",
+              data: "Submit Button Clicked",
+            });
+          })
         }
       }
     </script>
