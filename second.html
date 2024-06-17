@@ -68,9 +68,8 @@
       <h1>Welcome to our Marketing Landing Page!</h1>
 
       <div>
-        <a href="#" class="button" onclick="createEvent('button1')">Button 1</a>
-        <a href="#" class="button" onclick="createEvent('button2')">Button 2</a>
-        <a href="#" class="button" onclick="createEvent('button3')">Button 3</a>
+        <button class="button" type="button" name="button1">button 1</button>
+        <button class="button" type="reset" name="button2">button 2</button>
       </div>
 
       <div class="form-container">
@@ -78,9 +77,9 @@
         <form action="https://localhost:4000/api/cdn/{endpoint}" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
-          <button value="Submit" id="formSubmit">FormSubmit</button>
+          <button value="Submit" id="formSubmit" type="submit">FormSubmit</button>
         </form>
-        <button value="Submit" id="submit">Submit</button>
+        <button value="Submit" id="submit" type="menu">Submit</button>
       </div>
     </div>
     <script>
