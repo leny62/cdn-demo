@@ -84,16 +84,17 @@
       </div>
     </div>
     <script>
-      function createEvent(buttonName) {
-        // Code to create events goes here
-        console.log("Event created for " + buttonName);
-        // Push data when a button is clicked
-        hikr.pushData({
-          eventType: "button_click",
-          collectionName: "ButtonEvents",
-          data: buttonName,
-        });
-      }
-    </script>
+      document.addEventListener("DOMContentLoaded", function() {
+          // Step 2: Select all button elements
+          const buttons = document.getElementsByTagName("button");
+
+          // Step 3: Loop through each button to retrieve and log its type attribute
+          for (let i = 0; i < buttons.length; i++) {
+              const button = buttons[i];
+              const type = button.getAttribute("type");
+              console.log(`Button ${i + 1} type: ${type}`);
+          }
+      });
+  </script>
   </body>
 </html>
