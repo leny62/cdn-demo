@@ -87,23 +87,21 @@
       </div>
     </div>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const buttons = document.querySelectorAll("button");
-        console.log({ buttons });
-        // Step 3: Loop through each button to retrieve and log its type attribute
-        for (let i = 0; i < buttons.length; i++) {
-          const button = buttons[i];
-          const type = button.getAttribute("type");
-          console.log(`Button ${i + 1} type: ${type}`);
-          if(type==='button'){
-            hikr.pushData({
-              eventType: "click",
-              collectionName: "",
-              data: "Submit Button Clicked",
-            });
-          }
+      const buttons = document.querySelectorAll("button");
+      console.log({ buttons });
+      // Step 3: Loop through each button to retrieve and log its type attribute
+      for (let i = 0; i < buttons.length; i++) {
+        const button = buttons[i];
+        const type = button.getAttribute("type");
+        console.log(`Button ${i + 1} type: ${type}`);
+        if (type === "button") {
+          hikr.pushData({
+            eventType: "click",
+            collectionName: "",
+            data: "Submit Button Clicked",
+          });
         }
-      });
+      }
     </script>
   </body>
 </html>
