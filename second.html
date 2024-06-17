@@ -68,7 +68,7 @@
       <h1>Welcome to our Marketing Landing Page!</h1>
 
       <div>
-        <button class="button" type="button" name="button1">button 1</button>
+        <button class="button" type="button" name="button1"  >button 1</button>
         <button class="button" type="reset" name="button2">button 2</button>
       </div>
 
@@ -86,7 +86,7 @@
       document.addEventListener("DOMContentLoaded", function() {
           // Step 2: Select all button elements
           const buttons = document.getElementsByTagName("button");
-
+          console.log({buttons})
           // Step 3: Loop through each button to retrieve and log its type attribute
           for (let i = 0; i < buttons.length; i++) {
               const button = buttons[i];
