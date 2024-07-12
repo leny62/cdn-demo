@@ -54,7 +54,6 @@
       document.addEventListener("DOMContentLoaded", function () {
         hikr.config({
           websiteId: "4996094772",
-          userConsent: false,
         });
       });
     </script>
@@ -88,10 +87,12 @@
       </div>
     </div>
     <script>
-      hikr.pushData({
-        eventType: "",
-        collectionName: "",
-        data: "",
+      document.addEventListener("DOMContentLoaded", function () {
+        hikr.pushData({
+          eventType: "",
+          collectionName: "",
+          data: "",
+        });
       });
     </script>
   </body>
