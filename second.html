@@ -54,6 +54,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         hikr.config({
           websiteId: "4996094772",
+          userConsent: false,
         });
       });
     </script>
@@ -94,7 +95,7 @@
             eventType: "click",
             collectionName: "userInteractions",
             data: "Test Data",
-            userConsent: true,
+            userConsent: false,
           });
           console.log("pushData executed");
         } catch (error) {
