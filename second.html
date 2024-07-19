@@ -87,12 +87,19 @@
       </div>
     </div>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        hikr.pushData({
-          eventType: "",
-          collectionName: "",
-          data: "",
-        });
+      document.addEventListener("DOMContentLoaded", async function () {
+        console.log("Initializing pushData");
+        try {
+          await hikr.pushData({
+            eventType: "click",
+            collectionName: "userInteractions",
+            data: "Test Data",
+            userConsent: true,
+          });
+          console.log("pushData executed");
+        } catch (error) {
+          console.error("Error executing pushData:", error);
+        }
       });
     </script>
   </body>
