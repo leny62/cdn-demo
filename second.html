@@ -49,13 +49,22 @@
     </style>
 
     <script type="module" src="https://static.staticsave.com/hikrlink/hkr.js" defer></script>
-
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        hikr.config({
-          websiteId: "4996094772",
-          userConsent: false,
-        });
+      window.addEventListener("load", function () {
+        if (typeof hikr !== 'undefined') {
+          hikr.config({
+            websiteId: "4996094772",
+            userConsent: false,
+          });
+
+          hikr.pushData({
+            eventType: "click",
+            collectionName: "User Info",
+            data: "User Test Data"
+          })
+        } else {
+          console.error("hikr is not defined. Please ensure the script is loaded correctly.");
+        }
       });
     </script>
   </head>
@@ -69,8 +78,8 @@
       <h1>Welcome to our Marketing Landing Page!</h1>
 
       <div>
-        <button class="button" type="button" name="button1">button 1</button>
-        <button class="button" type="reset" name="button2">button 2</button>
+        <button class="button" type="button" name="button1">Button 1</button>
+        <button class="button" type="reset" name="button2">Button 2</button>
       </div>
 
       <div class="form-container">
@@ -79,7 +88,7 @@
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <button value="Submit" id="formSubmit" type="submit" class="button">
-            FormSubmit
+            Form Submit
           </button>
         </form>
         <button value="Submit" id="submit" type="menu" class="button">
@@ -87,21 +96,5 @@
         </button>
       </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", async function () {
-        console.log("Initializing pushData");
-        try {
-          await hikr.pushData({
-            eventType: "click",
-            collectionName: "userInteractions",
-            data: "Test Data",
-            userConsent: false,
-          });
-          console.log("pushData executed");
-        } catch (error) {
-          console.error("Error executing pushData:", error);
-        }
-      });
-    </script>
   </body>
 </html>
