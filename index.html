@@ -23,11 +23,15 @@
       <a href="second.html">Second Page</a>
     </div>
     <script>
-      window.addEventListener("load", function () {
-        hikr.config({
-          websiteId: "4996094772",
-          userConsent: false,
-        });
+      window.addEventListener("DOMContentLoaded", async function () {
+        try {
+          await hikr.config({
+            websiteId: "4996094772",
+            userConsent: false,
+          });
+        } catch(error) {
+          console.log(error)
+        }
       });
     </script>
   </body>
