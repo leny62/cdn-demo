@@ -3,7 +3,6 @@
   <head>
     <title>Test CDN</title>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script
@@ -23,15 +22,10 @@
       <a href="second.html">Second Page</a>
     </div>
     <script>
-      window.addEventListener("DOMContentLoaded", async function () {
-        try {
-          await hikr.config({
-            websiteId: "4996094772",
-            userConsent: false,
-          });
-        } catch(error) {
-          console.log(error)
-        }
+      document.addEventListener("DOMContentLoaded", function () {
+        hikr.config({
+          websiteId: "4996094772",
+        });
       });
     </script>
   </body>
