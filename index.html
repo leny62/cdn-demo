@@ -6,10 +6,7 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script
-      src="https://static.staticsave.com/hikrlink/hkr.js"
-      defer
-    ></script>
+    <script type="module" src="https://static.staticsave.com/hikrlink/hkr.js" defer></script>
   </head>
 
   <body class="">
@@ -22,9 +19,10 @@
       <a href="second.html">Second Page</a>
     </div>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", () => {
         hikr.config({
-          websiteId: "4996094772"
+          websiteId: "4996094772",
+          userConsent: true,
         });
       });
     </script>
