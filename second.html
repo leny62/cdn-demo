@@ -50,8 +50,15 @@
 
     <script src="https://static.staticsave.com/hikrlink/hkr.js" defer></script>
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        hikr.config({
+          websiteId: "4996094772",
+        });
+      });
+    </script>
+    <script>
       window.addEventListener("DOMContentLoaded", async function () {
-        if (typeof hikr !== 'undefined') {
+        if (typeof hikr !== "undefined") {
           hikr.config({
             websiteId: "4996094772",
             userConsent: false,
@@ -60,10 +67,12 @@
           hikr.pushData({
             eventType: "click",
             collectionName: "User Info",
-            data: "User Test Data"
-          })
+            data: "User Test Data",
+          });
         } else {
-          console.error("hikr is not defined. Please ensure the script is loaded correctly.");
+          console.error(
+            "hikr is not defined. Please ensure the script is loaded correctly."
+          );
         }
       });
     </script>
