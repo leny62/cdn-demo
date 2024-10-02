@@ -59,26 +59,12 @@
           websiteId: "4996094772",
           userConsent: true,
         });
-      });
-    </script>
-    <script>
-      window.addEventListener("DOMContentLoaded", async function () {
-        if (typeof hikr !== "undefined") {
-          hikr.config({
-            websiteId: "4996094772",
-            userConsent: false,
-          });
 
-          hikr.pushData({
-            eventType: "click",
-            collectionName: "User Info",
-            data: "User Test Data",
-          });
-        } else {
-          console.error(
-            "hikr is not defined. Please ensure the script is loaded correctly."
-          );
-        }
+        hikr.pushData({
+          eventType: "click",
+          collectionName: "User Info",
+          data: "User Test Data",
+        });
       });
     </script>
   </head>
